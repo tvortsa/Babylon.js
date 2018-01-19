@@ -1,20 +1,20 @@
 Babylon.js
 ==========
 
-Getting started? Play directly with the Babylon.js API via our [playground](http://www.babylonjs.com/playground). It contains also lot of simple samples to learn how to use it.
+Только приступаете? Поиграйте с Babylon.js API прямо на [playground](http://www.babylonjs.com/playground). Там также много простых примеров того как что использовать.
 
 [![Build Status](https://travis-ci.org/BabylonJS/Babylon.js.svg)](https://travis-ci.org/BabylonJS/Babylon.js) 
 
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=d0pZcGpNU0NPeTM5cEpEc2lTU2JJTWc2Mk9NSlAzTzdIaFBpTnF2TjBycz0tLStUWkVBejdVQmN4Y0dIUVVYeU0yc2c9PQ==--4e576f7b7c21279bc6d026b6f51796f58134856b)](https://www.browserstack.com/automate/public-build/d0pZcGpNU0NPeTM5cEpEc2lTU2JJTWc2Mk9NSlAzTzdIaFBpTnF2TjBycz0tLStUWkVBejdVQmN4Y0dIUVVYeU0yc2c9PQ==--4e576f7b7c21279bc6d026b6f51796f58134856b)
 
-**Any questions?** Here is our official [forum](http://www.html5gamedevs.com/forum/16-babylonjs/) on www.html5gamedevs.com.
+**Есть вопросы?** Вот наш официальный форум [forum](http://www.html5gamedevs.com/forum/16-babylonjs/) on www.html5gamedevs.com.
 
 ## CDN
 - https://cdn.babylonjs.com/babylon.js
 - https://cdn.babylonjs.com/babylon.max.js
 - https://cdn.babylonjs.com/babylon.worker.js
 
-Additional references can be found on https://cdn.babylonjs.com/xxx where xxx is the folder structure you can find in the /dist folder like https://cdn.babylonjs.com/gui/babylon.gui.min.js
+Дополнительные ссылки можно найти здесь https://cdn.babylonjs.com/xxx где xxx это структура папок, которую вы можете найти в /dist папке https://cdn.babylonjs.com/gui/babylon.gui.min.js
 
 For preview release you can use the following ones:
 
@@ -26,25 +26,25 @@ Additional references can be found on https://preview.babylonjs.com/xxx where xx
 
 ## NPM
 
-BabylonJS and its modules are published on NPM with full typing support. To install use
+BabylonJS и его модули публикуются в NPM с полной поддержкой typing. Для установки наберите
 
 ```
 npm install babylonjs --save
 ```
 
-This will allow you to import BabylonJS entirely using:
+Это позволит вам импортировать BabylonJS полностью используя:
 
 ```
 import * as BABYLON from 'babylonjs';
 ```
 
-or individual classes using:
+или отдельные классы используя:
 
 ```
 import { Scene, Engine } from 'babylonjs';
 ```
 
-If using TypeScript, don't forget to add 'babylonjs' to 'types' in tsconfig.json:
+При использовании TypeScript, не забудьте добавить 'babylonjs' к 'types' в tsconfig.json:
 
 ```
     ....
@@ -55,28 +55,28 @@ If using TypeScript, don't forget to add 'babylonjs' to 'types' in tsconfig.json
     ....
 ```
 
-To add a module install the respected package. A list of extra packages and their installation instructions can be found on [babylonjs' user at npm](https://www.npmjs.com/~babylonjs).
+Чтобы добавить модуль, установите соответствующий пакет. Список дополнительных пакетов и их инструкции по установке можно найти на [babylonjs' user at npm](https://www.npmjs.com/~babylonjs).
 
-## Usage
+## Использование
 See [Getting Started](http://doc.babylonjs.com/#getting-started)
 ```javascript
-// get the canvas DOM element
+// получаем элемент canvas DOM
 var canvas = document.getElementById('renderCanvas');
-// load the 3D engine
+// загружаем 3D движок
 var engine = new BABYLON.Engine(canvas, true);
-// createScene function that creates and return the scene
+// функция createScene которая создает и возвращает сцену
 var createScene = function(){
-    // create a basic BJS Scene object
+    // создаем базовый объект сцены BJS
     var scene = new BABYLON.Scene(engine);
-    // create a FreeCamera, and set its position to (x:0, y:5, z:-10)
+    // создаем FreeCamera, и помещаем ее в позицию (x:0, y:5, z:-10)
     var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5,-10), scene);
-    // target the camera to scene origin
+    // нацеливаем камеру на нулевую точку сцены
     camera.setTarget(BABYLON.Vector3.Zero());
-    // attach the camera to the canvas
+    // подключаем камеру к canvas
     camera.attachControl(canvas, false);
-    // create a basic light, aiming 0,1,0 - meaning, to the sky
+    // создаем базовый свет, aiming 0,1,0 - meaning, to the sky
     var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,1,0), scene);
-    // create a built-in "sphere" shape; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation
+    // создаем встроенную форму "sphere"; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation
     var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene);
     // move the sphere upward 1/2 of its height
     sphere.position.y = 1;
