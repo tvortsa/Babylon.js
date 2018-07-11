@@ -1,29 +1,31 @@
-﻿## Using a procedural texture from the library
+﻿## Использование процедурной текстуры из библиотеки
 
-You can find multiple procedural textures that just works with Babylon.js in *dist* folder. To use then, you only need to reference the associated .js file and use the new provided texture:
+Вы можете найти несколько процедурных текстур, которые просто работают с Babylon.js в папке *dist*. Для их использования, вам нужно только ссылаться на связанные .js файлы и использовать новые текстуры:
 
-```
+```js
 var fire = new BABYLON.FireProceduralTexture2("firePT", 256, scene);
 sphere.material.diffuseTexture = fire;
 ```
 
-## Adding a new procedural texture to the library
+## Добавление в библиотеку новой процедурной текстуры
 
-To add a new procedural texture, you have to create your own folder in *proceduralTextures* folder in src. Then you need to add a .ts file and one .fragment.fx files:
-* The .ts is the TypeScript code of your procedural texture
-* .fx file: GLSL code for fragment shaders
+Чтобы добавить новую процедурную текстуру, вы должны создать свою собственную папку в папке *proceduralTextures* в src. Затем вам нужно добавить .ts файл и один .fragment.fx файлы:
 
-## Integrating the procedural texture in the build process
+* .ts это TypeScript код вашей процедурной текстуры
 
-To build all procedural textures and generate the *dist* folder, just run from the tools/gulp folder:
+* .fx файл: GLSL код для fragment shaders
 
-```
+## Интеграция процедурной текстуры в процессе сборки
+
+Чтобы собрать все процедурные текстуры и создать *dist* папку, просто запустите папку tools/gulp:
+
+```js
 gulp proceduralTextureLibrary
 ```
 
-To integrate your new procedural texture to the build process, you have to edit the config.sjonfile in the tools/gulp folder and add an entry in the "proceduralTextureLibrary/libraries" section of the file:
+To integrate your new procedural texture to the build process, you have to edit the config.jsonfile в папке tools/gulp and add an entry in the "proceduralTextureLibrary/libraries" section of the file:
 
-```
+```js
   "libraries": [
     ...
       {
@@ -49,7 +51,7 @@ gui.add(options, 'texture', ['default', 'fire', 'wood', 'cloud', 'grass', 'road'
       currentTexture = firePT;
       addPToptions(firePT, ['time', 'alphaThreshold', 'speed', ]);
       break;
-    
+
     //.......................
 
     //YOURTEXTURE
@@ -69,6 +71,6 @@ This page allows you to test your code with animated meshes, shadows, various ki
 
 To serve this page, you can start from the tools/gulp folder the task:
 
-```
+```js
 gulp webserver
 ```

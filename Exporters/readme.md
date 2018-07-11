@@ -1,1 +1,1 @@
-All exporters are now available on their own repo: https://github.com/BabylonJS/Exporters
+Все экспортеры теперь доступны на собственном репо: https://github.com/BabylonJS/Exporters

@@ -98,7 +98,7 @@ window.addEventListener('resize', function(){
 ```
 ## Preview release
 
-Preview version of **3.2** can be found [here](https://github.com/BabylonJS/Babylon.js/tree/master/dist/preview%20release).
+Прежняя версия **3.2** может быть найдена [здесь](https://github.com/BabylonJS/Babylon.js/tree/master/dist/preview%20release).
 If you want to contribute, please read our [contribution guidelines](https://github.com/BabylonJS/Babylon.js/blob/master/contributing.md) first.
 
 ## Documentation

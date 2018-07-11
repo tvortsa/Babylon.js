@@ -1,13 +1,13 @@
-﻿## Using a post process from the library
+﻿# Использование пост-процессинга из библиотеки
 
-You can find multiple post processes that just works with Babylon.js in *dist* folder. To use then, you only need to reference the associated .js file and use the new provided post process:
+Вы можете найти несколько почтовых процессов, которые просто работают с Babylon.js в папке *dist*. Для их использования, вам нужно только ссылаться на связанные .js файлы и использовать новый предоставленный пост-процесс:
 
-```
+```js
 var fire = new BABYLON.FireProceduralTexture2("firePT", 256, scene);
 sphere.material.diffuseTexture = fire;
 ```
 
-## Adding a new post process to the library
+## Добавление нового пост- процесса в библиотеку
 
 To add a new post process, you have to create your own folder in *postProcesses/src* folder. Then you need to add a .ts file and one .fragment.fx files:
 * The .ts is the TypeScript code of your post process
@@ -60,6 +60,6 @@ This page allows you to test your code on a simple sphere.
 
 To serve this page, you can start from the tools/gulp folder the task:
 
-```
+```js
 gulp webserver
 ```
