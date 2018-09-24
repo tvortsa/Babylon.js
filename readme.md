@@ -102,7 +102,7 @@ window.addEventListener('resize', function(){
 If you want to contribute, please read our [contribution guidelines](https://github.com/BabylonJS/Babylon.js/blob/master/contributing.md) first.
 
 ## Documentation
-- [Documentation](http://doc.babylonjs.com)
+- [Documentation](https://github.com/tvortsa/Documentation/tree/russian)
 - [Samples](https://github.com/BabylonJS/Samples)
 - [Video overview (1 hour) of BabylonJS features](http://www.youtube.com/watch?v=z80TYMqsdEM)
 - [Complete course (8 hours)](http://www.microsoftvirtualacademy.com/training-courses/introduction-to-webgl-3d-with-html5-and-babylon-js)
